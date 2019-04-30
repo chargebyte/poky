@@ -592,6 +592,11 @@ python () {
             needsrcrev = True
             d.appendVarFlag('do_fetch', 'depends', ' subversion-native:do_populate_sysroot')
 
+        # Svn packages should DEPEND on subversion-native
+        if scheme == "svn2":
+            needsrcrev = True
+            d.appendVarFlag('do_fetch', 'depends', ' subversion-native:do_populate_sysroot')
+
         # Git packages should DEPEND on git-native
         elif scheme in ("git", "gitsm"):
             needsrcrev = True

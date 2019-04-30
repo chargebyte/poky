@@ -1846,6 +1846,7 @@ from . import gitsm
 from . import gitannex
 from . import local
 from . import svn
+from . import svn2
 from . import wget
 from . import ssh
 from . import sftp
@@ -1861,6 +1862,7 @@ from . import npm
 methods.append(local.Local())
 methods.append(wget.Wget())
 methods.append(svn.Svn())
+methods.append(svn2.Svn2())
 methods.append(git.Git())
 methods.append(gitsm.GitSM())
 methods.append(gitannex.GitANNEX())
